@@ -16,6 +16,7 @@ import sys
 import csv
 import common_picking
 import common_calib
+from input import *
 
 def main():
     filename_out = 'known_correspondences.csv'

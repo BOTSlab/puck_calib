@@ -19,10 +19,11 @@ Vardy, A., Vorobyev, G. & Banzhaf, W. Cache consensus: rapid object sorting by a
 
 # Instructions
 
-Set the name of the input image in `correspondences_from_picks.py` along with
-parameters of the grid of target objects. If using ROS, you could potentially
-use `correspondences_from_tags.py` (but this file has not been touched in
-many years). The result is `known_correspondences.csv`.
+Set the name of the input image along with parameters of the calibration grid
+in `input.py`. Now run `correspondences_from_picks.py`. If using ROS, you could 
+potentially use `correspondences_from_tags.py` from AprilTags detected in a
+camera or stored image, but this file has not been touched in many years. The 
+result is `known_correspondences.csv`.
 
 Next, run `interpolator.py`.  It produces the file `interpolated_correspondences.csv`.
 
@@ -31,3 +32,4 @@ Next, run `interpolator.py`.  It produces the file `interpolated_correspondences
 First written around April 2014. Updated in April 2025.
 
 Andrew Vardy
+bots.cs.mun.ca
