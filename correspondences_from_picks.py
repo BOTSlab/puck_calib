@@ -29,14 +29,14 @@ def main():
             if (not common_calib.exclude_origin) or (xr != 0 or yr != 0):
                 robotCoords.append((xr, yr))
             id += 1
-    print robotCoords
+    print(robotCoords)
 
-    print '''
+    print('''
     Please click on the centre of the targets (left click performs a click,
     right click does an undo) ordered from left-to-right and top-to-bottom.
-    '''
+    ''')
     if common_calib.exclude_origin:
-        print "\nDo not select the origin (middle)."
+        print("\nDo not select the origin (middle).")
         
     pickList = common_picking.pick(common_calib.image_filename, robotCoords)
 
@@ -51,8 +51,8 @@ def main():
         for row in range(len(robotCoords)):
             xy = pickList[row]
             robotCoord = robotCoords[row]
-            rowDict = {'xi':xy[0], \
-                       'yi':xy[1], \
+            rowDict = {'xi':int(xy[0]), \
+                       'yi':int(xy[1]), \
                        'xr':robotCoord[0], \
                        'yr':robotCoord[1] }
             writer.writerow(rowDict)

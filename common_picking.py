@@ -44,7 +44,7 @@ by right-clicking.
     # fit the screen.
     info = pygame.display.Info()
     scaleFactor = max(1, min(info.current_w / imgSize[0], info.current_h / imgSize[1]))
-    print "scaleFactor: ", scaleFactor
+    print("scaleFactor: ", scaleFactor)
 
     scaledSize = scaleFactor * imgSize[0], scaleFactor * imgSize[1]
     scaledImg = pygame.transform.scale(img, scaledSize)
@@ -75,7 +75,7 @@ by right-clicking.
                 (button1, button2, button3) = pygame.mouse.get_pressed()
                 rawPick = pygame.mouse.get_pos()
                 pick = (rawPick[0] / scaleFactor) / dec_divisor_width, (rawPick[1] / scaleFactor) / dec_divisor_height
-                print pick
+                print(pick)
                 if button1:
                     pickList.append(pick)
                     index += 1

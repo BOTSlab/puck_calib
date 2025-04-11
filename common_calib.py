@@ -8,29 +8,29 @@ marker.
 
 from math import floor
 
-image_filename = 'calib_floor_800_600.jpg'
+image_filename = 'grid_640x480.jpg'
     
 # The (xr, yr) position of the upper-left target in the calibration grid,
 # measured in cm.
-upper_left_x = 76.2 # 30 inches
-upper_left_y = 76.2
+upper_left_x = 3 * 10.16
+upper_left_y = 3 * 10.16
 
 # The distance between targets (assuming that the same distance exists between
 # rows as between columns).
-inter_target_distance = 30.48
+inter_target_distance = 10.16
 
 # Width in targets.  In other words, the number of targets in a row
-width_in_targets = 6
+width_in_targets = 7
 
 # Height in targets---the number of targets in a column
-height_in_targets = 6
+height_in_targets = 4
 
 # Whether to exclude the origin when picking.
 exclude_origin = False
 
 # Radius around origin to exclude when running 'interpolator.py'.  Set to None
 # to disable exclusion.
-exclude_radius = 9.1
+exclude_radius = None
 
 # Dimensions of output.
 output_width = 80
